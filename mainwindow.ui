@@ -81,25 +81,47 @@
              </widget>
             </item>
             <item>
-             <widget class="QPushButton" name="btn_pc1_available">
-              <property name="text">
-               <string>시설 사용 가능</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="btn_pc1_unavailable">
-              <property name="text">
-               <string>시설 사용 불가</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="btn_pc1_reset">
-              <property name="text">
-               <string>초기화</string>
-              </property>
-             </widget>
+             <layout class="QHBoxLayout" name="layout_pc1_btn">
+              <item>
+               <widget class="QPushButton" name="btn_pc1_available">
+                <property name="maximumSize">
+                 <size>
+                  <width>200</width>
+                  <height>300</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>시설 사용 가능</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_pc1_unavailable">
+                <property name="maximumSize">
+                 <size>
+                  <width>200</width>
+                  <height>300</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>시설 사용 불가</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_pc1_reset">
+                <property name="maximumSize">
+                 <size>
+                  <width>200</width>
+                  <height>300</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>초기화</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
             </item>
            </layout>
           </item>
@@ -132,25 +154,29 @@
              </widget>
             </item>
             <item>
-             <widget class="QPushButton" name="btn_pc2_available">
-              <property name="text">
-               <string>시설 사용 가능</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="btn_pc2_unavailable">
-              <property name="text">
-               <string>시설 사용 불가</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="btn_pc2_reset">
-              <property name="text">
-               <string>초기화</string>
-              </property>
-             </widget>
+             <layout class="QHBoxLayout" name="layout_pc2_btn">
+             <item>
+              <widget class="QPushButton" name="btn_pc2_available">
+               <property name="text">
+                <string>시설 사용 가능</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btn_pc2_unavailable">
+               <property name="text">
+                <string>시설 사용 불가</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btn_pc2_reset">
+               <property name="text">
+                <string>초기화</string>
+               </property>
+              </widget>
+             </item>
+             </layout>
             </item>
            </layout>
           </item>
@@ -183,25 +209,29 @@
              </widget>
             </item>
             <item>
-             <widget class="QPushButton" name="btn_pc3_available">
-              <property name="text">
-               <string>시설 사용 가능</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="btn_pc3_unavailable">
-              <property name="text">
-               <string>시설 사용 불가</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="btn_pc3_reset">
-              <property name="text">
-               <string>초기화</string>
-              </property>
-             </widget>
+             <layout class="QHBoxLayout" name="layout_pc3_btn">
+             <item>
+              <widget class="QPushButton" name="btn_pc3_available">
+               <property name="text">
+                <string>시설 사용 가능</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btn_pc3_unavailable">
+               <property name="text">
+                <string>시설 사용 불가</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btn_pc3_reset">
+               <property name="text">
+                <string>초기화</string>
+               </property>
+              </widget>
+             </item>
+             </layout>
             </item>
            </layout>
           </item>
@@ -234,25 +264,29 @@
              </widget>
             </item>
             <item>
-             <widget class="QPushButton" name="btn_pc4_available">
-              <property name="text">
-               <string>시설 사용 가능</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="btn_pc4_unavailable">
-              <property name="text">
-               <string>시설 사용 불가</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="btn_pc4_reset">
-              <property name="text">
-               <string>초기화</string>
-              </property>
-             </widget>
+             <layout class="QHBoxLayout" name="layout_pc4_btn">
+             <item>
+              <widget class="QPushButton" name="btn_pc4_available">
+               <property name="text">
+                <string>시설 사용 가능</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btn_pc4_unavailable">
+               <property name="text">
+                <string>시설 사용 불가</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btn_pc4_reset">
+               <property name="text">
+                <string>초기화</string>
+               </property>
+              </widget>
+             </item>
+             </layout>
             </item>
            </layout>
           </item>
