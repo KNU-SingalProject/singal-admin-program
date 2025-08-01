@@ -18,7 +18,7 @@
     <item>
      <widget class="QTabWidget" name="tabWidget">
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tab_usage">
        <attribute name="title">
@@ -520,7 +520,7 @@
         <item>
          <widget class="QLabel" name="label_reservation">
           <property name="styleSheet">
-           <string notr="true">font-weight: bold; font-size: 24px; </string>
+           <string notr="true">font-weight: bold; font-size: 18px;</string>
           </property>
           <property name="text">
            <string>예약자 명단</string>
@@ -587,10 +587,316 @@
           <item row="1" column="0">
            <layout class="QVBoxLayout" name="layout_reservation_pc">
             <item>
-             <widget class="QListWidget" name="list_reservation_pc"/>
+             <layout class="QHBoxLayout" name="layout_pc_slot_1">
+              <item>
+               <widget class="QLabel" name="label_pc_slot_1">
+                <property name="text">
+                 <string>1번.</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="value_pc_slot_1"/>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_edit_pc_slot_1">
+                <property name="minimumSize">
+                 <size>
+                  <width>50</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">font-weight: bold; font-size: 12px; </string>
+                </property>
+                <property name="text">
+                 <string>수정</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="layout_pc_slot_2">
+              <item>
+               <widget class="QLabel" name="label_pc_slot_2">
+                <property name="text">
+                 <string>2번.</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="value_pc_slot_2"/>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_edit_pc_slot_2">
+                <property name="minimumSize">
+                 <size>
+                  <width>50</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">font-weight: bold; font-size: 12px; </string>
+                </property>
+                <property name="text">
+                 <string>수정</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="layout_pc_slot_3">
+              <item>
+               <widget class="QLabel" name="label_pc_slot_3">
+                <property name="text">
+                 <string>3번.</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="value_pc_slot_3"/>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_edit_pc_slot_3">
+                <property name="minimumSize">
+                 <size>
+                  <width>50</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">font-weight: bold; font-size: 12px; </string>
+                </property>
+                <property name="text">
+                 <string>수정</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="layout_pc_slot_4">
+              <item>
+               <widget class="QLabel" name="label_pc_slot_4">
+                <property name="text">
+                 <string>4번.</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="value_pc_slot_4"/>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_edit_pc_slot_4">
+                <property name="minimumSize">
+                 <size>
+                  <width>50</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">font-weight: bold; font-size: 12px; </string>
+                </property>
+                <property name="text">
+                 <string>수정</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="layout_pc_slot_5">
+              <item>
+               <widget class="QLabel" name="label_pc_slot_5">
+                <property name="text">
+                 <string>5번.</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="value_pc_slot_5"/>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_edit_pc_slot_5">
+                <property name="minimumSize">
+                 <size>
+                  <width>50</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">font-weight: bold; font-size: 12px; </string>
+                </property>
+                <property name="text">
+                 <string>수정</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="layout_pc_slot_6">
+              <item>
+               <widget class="QLabel" name="label_pc_slot_6">
+                <property name="text">
+                 <string>6번.</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="value_pc_slot_6"/>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_edit_pc_slot_6">
+                <property name="minimumSize">
+                 <size>
+                  <width>50</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">font-weight: bold; font-size: 12px; </string>
+                </property>
+                <property name="text">
+                 <string>수정</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="layout_pc_slot_7">
+              <item>
+               <widget class="QLabel" name="label_pc_slot_7">
+                <property name="text">
+                 <string>7번.</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="value_pc_slot_7"/>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_edit_pc_slot_7">
+                <property name="minimumSize">
+                 <size>
+                  <width>50</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">font-weight: bold; font-size: 12px; </string>
+                </property>
+                <property name="text">
+                 <string>수정</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="layout_pc_slot_8">
+              <item>
+               <widget class="QLabel" name="label_pc_slot_8">
+                <property name="text">
+                 <string>8번.</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="value_pc_slot_8"/>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_edit_pc_slot_8">
+                <property name="minimumSize">
+                 <size>
+                  <width>50</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">font-weight: bold; font-size: 12px; </string>
+                </property>
+                <property name="text">
+                 <string>수정</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="layout_pc_slot_9">
+              <item>
+               <widget class="QLabel" name="label_pc_slot_9">
+                <property name="text">
+                 <string>9번.</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="value_pc_slot_9"/>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_edit_pc_slot_9">
+                <property name="minimumSize">
+                 <size>
+                  <width>50</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">font-weight: bold; font-size: 12px; </string>
+                </property>
+                <property name="text">
+                 <string>수정</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="layout_pc_slot_10">
+              <item>
+               <widget class="QLabel" name="label_pc_slot_10">
+                <property name="text">
+                 <string>10번.</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="value_pc_slot_10"/>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_edit_pc_slot_10">
+                <property name="minimumSize">
+                 <size>
+                  <width>50</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">font-weight: bold; font-size: 12px; </string>
+                </property>
+                <property name="text">
+                 <string>수정</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
             </item>
             <item>
              <widget class="QPushButton" name="btn_pc_use">
+              <property name="minimumSize">
+               <size>
+                <width>50</width>
+                <height>20</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">font-weight: bold; font-size: 12px; </string>
+              </property>
               <property name="text">
                <string>시설 이용</string>
               </property>
@@ -598,6 +904,15 @@
             </item>
             <item>
              <widget class="QPushButton" name="btn_pc_finish">
+              <property name="minimumSize">
+               <size>
+                <width>50</width>
+                <height>20</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">font-weight: bold; font-size: 12px; </string>
+              </property>
               <property name="text">
                <string>시설 이용 마감</string>
               </property>
@@ -608,10 +923,356 @@
           <item row="1" column="1">
            <layout class="QVBoxLayout" name="layout_reservation_nintendo">
             <item>
-             <widget class="QListWidget" name="list_reservation_nintendo"/>
+             <layout class="QHBoxLayout" name="layout_nintendo_slot_1">
+              <item>
+               <widget class="QLabel" name="label_nintendo_slot_1">
+                <property name="text">
+                 <string>1번.</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="value_nintendo_slot_1">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_edit_nintendo_slot_1">
+                <property name="minimumSize">
+                 <size>
+                  <width>50</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">font-weight: bold; font-size: 12px; </string>
+                </property>
+                <property name="text">
+                 <string>수정</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="layout_nintendo_slot_2">
+              <item>
+               <widget class="QLabel" name="label_nintendo_slot_2">
+                <property name="text">
+                 <string>2번.</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="value_nintendo_slot_2">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_edit_nintendo_slot_2">
+                <property name="minimumSize">
+                 <size>
+                  <width>50</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">font-weight: bold; font-size: 12px; </string>
+                </property>
+                <property name="text">
+                 <string>수정</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="layout_nintendo_slot_3">
+              <item>
+               <widget class="QLabel" name="label_nintendo_slot_3">
+                <property name="text">
+                 <string>3번.</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="value_nintendo_slot_3">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_edit_nintendo_slot_3">
+                <property name="minimumSize">
+                 <size>
+                  <width>50</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">font-weight: bold; font-size: 12px; </string>
+                </property>
+                <property name="text">
+                 <string>수정</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="layout_nintendo_slot_4">
+              <item>
+               <widget class="QLabel" name="label_nintendo_slot_4">
+                <property name="text">
+                 <string>4번.</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="value_nintendo_slot_4">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_edit_nintendo_slot_4">
+                <property name="minimumSize">
+                 <size>
+                  <width>50</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">font-weight: bold; font-size: 12px; </string>
+                </property>
+                <property name="text">
+                 <string>수정</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="layout_nintendo_slot_5">
+              <item>
+               <widget class="QLabel" name="label_nintendo_slot_5">
+                <property name="text">
+                 <string>5번.</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="value_nintendo_slot_5">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_edit_nintendo_slot_5">
+                <property name="minimumSize">
+                 <size>
+                  <width>50</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">font-weight: bold; font-size: 12px; </string>
+                </property>
+                <property name="text">
+                 <string>수정</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="layout_nintendo_slot_6">
+              <item>
+               <widget class="QLabel" name="label_nintendo_slot_6">
+                <property name="text">
+                 <string>6번.</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="value_nintendo_slot_6">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_edit_nintendo_slot_6">
+                <property name="minimumSize">
+                 <size>
+                  <width>50</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">font-weight: bold; font-size: 12px; </string>
+                </property>
+                <property name="text">
+                 <string>수정</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="layout_nintendo_slot_7">
+              <item>
+               <widget class="QLabel" name="label_nintendo_slot_7">
+                <property name="text">
+                 <string>7번.</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="value_nintendo_slot_7">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_edit_nintendo_slot_7">
+                <property name="minimumSize">
+                 <size>
+                  <width>50</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">font-weight: bold; font-size: 12px; </string>
+                </property>
+                <property name="text">
+                 <string>수정</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="layout_nintendo_slot_8">
+              <item>
+               <widget class="QLabel" name="label_nintendo_slot_8">
+                <property name="text">
+                 <string>8번.</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="value_nintendo_slot_8">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_edit_nintendo_slot_8">
+                <property name="minimumSize">
+                 <size>
+                  <width>50</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">font-weight: bold; font-size: 12px; </string>
+                </property>
+                <property name="text">
+                 <string>수정</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="layout_nintendo_slot_9">
+              <item>
+               <widget class="QLabel" name="label_nintendo_slot_9">
+                <property name="text">
+                 <string>9번.</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="value_nintendo_slot_9">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_edit_nintendo_slot_9">
+                <property name="minimumSize">
+                 <size>
+                  <width>50</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">font-weight: bold; font-size: 12px; </string>
+                </property>
+                <property name="text">
+                 <string>수정</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="layout_nintendo_slot_10">
+              <item>
+               <widget class="QLabel" name="label_nintendo_slot_10">
+                <property name="text">
+                 <string>10번.</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="value_nintendo_slot_10">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_edit_nintendo_slot_10">
+                <property name="minimumSize">
+                 <size>
+                  <width>50</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">font-weight: bold; font-size: 12px; </string>
+                </property>
+                <property name="text">
+                 <string>수정</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
             </item>
             <item>
              <widget class="QPushButton" name="btn_nintendo_use">
+              <property name="minimumSize">
+               <size>
+                <width>50</width>
+                <height>20</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">font-weight: bold; font-size: 12px; </string>
+              </property>
               <property name="text">
                <string>시설 이용</string>
               </property>
@@ -619,6 +1280,15 @@
             </item>
             <item>
              <widget class="QPushButton" name="btn_nintendo_finish">
+              <property name="minimumSize">
+               <size>
+                <width>50</width>
+                <height>20</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">font-weight: bold; font-size: 12px; </string>
+              </property>
               <property name="text">
                <string>시설 이용 마감</string>
               </property>
@@ -629,10 +1299,356 @@
           <item row="1" column="2">
            <layout class="QVBoxLayout" name="layout_reservation_karaoke">
             <item>
-             <widget class="QListWidget" name="list_reservation_karaoke"/>
+             <layout class="QHBoxLayout" name="layout_karaoke_slot_1">
+              <item>
+               <widget class="QLabel" name="label_karaoke_slot_1">
+                <property name="text">
+                 <string>1번.</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="value_karaoke_slot_1">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_edit_karaoke_slot_1">
+                <property name="minimumSize">
+                 <size>
+                  <width>50</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">font-weight: bold; font-size: 12px; </string>
+                </property>
+                <property name="text">
+                 <string>수정</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="layout_karaoke_slot_2">
+              <item>
+               <widget class="QLabel" name="label_karaoke_slot_2">
+                <property name="text">
+                 <string>2번.</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="value_karaoke_slot_2">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_edit_karaoke_slot_2">
+                <property name="minimumSize">
+                 <size>
+                  <width>50</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">font-weight: bold; font-size: 12px; </string>
+                </property>
+                <property name="text">
+                 <string>수정</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="layout_karaoke_slot_3">
+              <item>
+               <widget class="QLabel" name="label_karaoke_slot_3">
+                <property name="text">
+                 <string>3번.</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="value_karaoke_slot_3">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_edit_karaoke_slot_3">
+                <property name="minimumSize">
+                 <size>
+                  <width>50</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">font-weight: bold; font-size: 12px; </string>
+                </property>
+                <property name="text">
+                 <string>수정</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="layout_karaoke_slot_4">
+              <item>
+               <widget class="QLabel" name="label_karaoke_slot_4">
+                <property name="text">
+                 <string>4번.</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="value_karaoke_slot_4">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_edit_karaoke_slot_4">
+                <property name="minimumSize">
+                 <size>
+                  <width>50</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">font-weight: bold; font-size: 12px; </string>
+                </property>
+                <property name="text">
+                 <string>수정</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="layout_karaoke_slot_5">
+              <item>
+               <widget class="QLabel" name="label_karaoke_slot_5">
+                <property name="text">
+                 <string>5번.</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="value_karaoke_slot_5">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_edit_karaoke_slot_5">
+                <property name="minimumSize">
+                 <size>
+                  <width>50</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">font-weight: bold; font-size: 12px; </string>
+                </property>
+                <property name="text">
+                 <string>수정</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="layout_karaoke_slot_6">
+              <item>
+               <widget class="QLabel" name="label_karaoke_slot_6">
+                <property name="text">
+                 <string>6번.</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="value_karaoke_slot_6">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_edit_karaoke_slot_6">
+                <property name="minimumSize">
+                 <size>
+                  <width>50</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">font-weight: bold; font-size: 12px; </string>
+                </property>
+                <property name="text">
+                 <string>수정</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="layout_karaoke_slot_7">
+              <item>
+               <widget class="QLabel" name="label_karaoke_slot_7">
+                <property name="text">
+                 <string>7번.</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="value_karaoke_slot_7">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_edit_karaoke_slot_7">
+                <property name="minimumSize">
+                 <size>
+                  <width>50</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">font-weight: bold; font-size: 12px; </string>
+                </property>
+                <property name="text">
+                 <string>수정</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="layout_karaoke_slot_8">
+              <item>
+               <widget class="QLabel" name="label_karaoke_slot_8">
+                <property name="text">
+                 <string>8번.</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="value_karaoke_slot_8">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_edit_karaoke_slot_8">
+                <property name="minimumSize">
+                 <size>
+                  <width>50</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">font-weight: bold; font-size: 12px; </string>
+                </property>
+                <property name="text">
+                 <string>수정</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="layout_karaoke_slot_9">
+              <item>
+               <widget class="QLabel" name="label_karaoke_slot_9">
+                <property name="text">
+                 <string>9번.</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="value_karaoke_slot_9">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_edit_karaoke_slot_9">
+                <property name="minimumSize">
+                 <size>
+                  <width>50</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">font-weight: bold; font-size: 12px; </string>
+                </property>
+                <property name="text">
+                 <string>수정</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="layout_karaoke_slot_10">
+              <item>
+               <widget class="QLabel" name="label_karaoke_slot_10">
+                <property name="text">
+                 <string>10번.</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="value_karaoke_slot_10">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_edit_karaoke_slot_10">
+                <property name="minimumSize">
+                 <size>
+                  <width>50</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">font-weight: bold; font-size: 12px; </string>
+                </property>
+                <property name="text">
+                 <string>수정</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
             </item>
             <item>
              <widget class="QPushButton" name="btn_karaoke_use">
+              <property name="minimumSize">
+               <size>
+                <width>50</width>
+                <height>20</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">font-weight: bold; font-size: 12px; </string>
+              </property>
               <property name="text">
                <string>시설 이용</string>
               </property>
@@ -640,6 +1656,15 @@
             </item>
             <item>
              <widget class="QPushButton" name="btn_karaoke_finish">
+              <property name="minimumSize">
+               <size>
+                <width>50</width>
+                <height>20</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">font-weight: bold; font-size: 12px; </string>
+              </property>
               <property name="text">
                <string>시설 이용 마감</string>
               </property>
@@ -650,10 +1675,356 @@
           <item row="1" column="3">
            <layout class="QVBoxLayout" name="layout_reservation_badminton">
             <item>
-             <widget class="QListWidget" name="list_reservation_badminton"/>
+             <layout class="QHBoxLayout" name="layout_badminton_slot_1">
+              <item>
+               <widget class="QLabel" name="label_badminton_slot_1">
+                <property name="text">
+                 <string>1번.</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="value_badminton_slot_1">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_edit_badminton_slot_1">
+                <property name="minimumSize">
+                 <size>
+                  <width>50</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">font-weight: bold; font-size: 12px; </string>
+                </property>
+                <property name="text">
+                 <string>수정</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="layout_badminton_slot_2">
+              <item>
+               <widget class="QLabel" name="label_badminton_slot_2">
+                <property name="text">
+                 <string>2번.</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="value_badminton_slot_2">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_edit_badminton_slot_2">
+                <property name="minimumSize">
+                 <size>
+                  <width>50</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">font-weight: bold; font-size: 12px; </string>
+                </property>
+                <property name="text">
+                 <string>수정</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="layout_badminton_slot_3">
+              <item>
+               <widget class="QLabel" name="label_badminton_slot_3">
+                <property name="text">
+                 <string>3번.</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="value_badminton_slot_3">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_edit_badminton_slot_3">
+                <property name="minimumSize">
+                 <size>
+                  <width>50</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">font-weight: bold; font-size: 12px; </string>
+                </property>
+                <property name="text">
+                 <string>수정</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="layout_badminton_slot_4">
+              <item>
+               <widget class="QLabel" name="label_badminton_slot_4">
+                <property name="text">
+                 <string>4번.</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="value_badminton_slot_4">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_edit_badminton_slot_4">
+                <property name="minimumSize">
+                 <size>
+                  <width>50</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">font-weight: bold; font-size: 12px; </string>
+                </property>
+                <property name="text">
+                 <string>수정</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="layout_badminton_slot_5">
+              <item>
+               <widget class="QLabel" name="label_badminton_slot_5">
+                <property name="text">
+                 <string>5번.</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="value_badminton_slot_5">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_edit_badminton_slot_5">
+                <property name="minimumSize">
+                 <size>
+                  <width>50</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">font-weight: bold; font-size: 12px; </string>
+                </property>
+                <property name="text">
+                 <string>수정</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="layout_badminton_slot_6">
+              <item>
+               <widget class="QLabel" name="label_badminton_slot_6">
+                <property name="text">
+                 <string>6번.</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="value_badminton_slot_6">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_edit_badminton_slot_6">
+                <property name="minimumSize">
+                 <size>
+                  <width>50</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">font-weight: bold; font-size: 12px; </string>
+                </property>
+                <property name="text">
+                 <string>수정</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="layout_badminton_slot_7">
+              <item>
+               <widget class="QLabel" name="label_badminton_slot_7">
+                <property name="text">
+                 <string>7번.</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="value_badminton_slot_7">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_edit_badminton_slot_7">
+                <property name="minimumSize">
+                 <size>
+                  <width>50</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">font-weight: bold; font-size: 12px; </string>
+                </property>
+                <property name="text">
+                 <string>수정</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="layout_badminton_slot_8">
+              <item>
+               <widget class="QLabel" name="label_badminton_slot_8">
+                <property name="text">
+                 <string>8번.</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="value_badminton_slot_8">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_edit_badminton_slot_8">
+                <property name="minimumSize">
+                 <size>
+                  <width>50</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">font-weight: bold; font-size: 12px; </string>
+                </property>
+                <property name="text">
+                 <string>수정</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="layout_badminton_slot_9">
+              <item>
+               <widget class="QLabel" name="label_badminton_slot_9">
+                <property name="text">
+                 <string>9번.</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="value_badminton_slot_9">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_edit_badminton_slot_9">
+                <property name="minimumSize">
+                 <size>
+                  <width>50</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">font-weight: bold; font-size: 12px; </string>
+                </property>
+                <property name="text">
+                 <string>수정</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="layout_badminton_slot_10">
+              <item>
+               <widget class="QLabel" name="label_badminton_slot_10">
+                <property name="text">
+                 <string>10번.</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="value_badminton_slot_10">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_edit_badminton_slot_10">
+                <property name="minimumSize">
+                 <size>
+                  <width>50</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">font-weight: bold; font-size: 12px; </string>
+                </property>
+                <property name="text">
+                 <string>수정</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
             </item>
             <item>
              <widget class="QPushButton" name="btn_badminton_use">
+              <property name="minimumSize">
+               <size>
+                <width>50</width>
+                <height>20</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">font-weight: bold; font-size: 12px; </string>
+              </property>
               <property name="text">
                <string>시설 이용</string>
               </property>
@@ -661,8 +2032,17 @@
             </item>
             <item>
              <widget class="QPushButton" name="btn_badminton_finish">
+              <property name="minimumSize">
+               <size>
+                <width>50</width>
+                <height>20</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">font-weight: bold; font-size: 12px; </string>
+              </property>
               <property name="text">
-               <string>시설 이용 막마</string>
+               <string>시설 이용 마감</string>
               </property>
              </widget>
             </item>
@@ -672,60 +2052,72 @@
         </item>
        </layout>
       </widget>
-
       <widget class="QWidget" name="tab_member">
        <attribute name="title">
         <string>회원가입</string>
        </attribute>
        <layout class="QVBoxLayout" name="layout_member">
-       <item row="0" column="0">
-        <widget class="QLabel" name="label_memberID">
-         <property name="text"><string>회원번호:</string></property>
-        </widget>
-       </item>
-       <item row="0" column="1">
-        <widget class="QLineEdit" name="lineEdit_memberID"/>
-       </item>
-
-       <item row="1" column="0">
-        <widget class="QLabel" name="label_name">
-         <property name="text"><string>이름:</string></property>
-        </widget>
-       </item>
-       <item row="1" column="1">
-        <widget class="QLineEdit" name="lineEdit_name"/>
-       </item>
-
-       <item row="2" column="0">
-        <widget class="QLabel" name="label_gender">
-         <property name="text"><string>성별:</string></property>
-        </widget>
-       </item>
-       <item row="2" column="1">
-        <widget class="QComboBox" name="comboBox_gender">
-         <item><property name="text"><string>male</string></property></item>
-         <item><property name="text"><string>female</string></property></item>
-        </widget>
-       </item>
-
-       <item row="3" column="0">
-        <widget class="QLabel" name="label_birth">
-         <property name="text"><string>생년월일:</string></property>
-        </widget>
-       </item>
-       <item row="3" column="1">
-        <widget class="QDateEdit" name="dateEdit_birth"/>
-       </item>
-
-       <item row="4" column="0">
-        <widget class="QLabel" name="label_phone">
-         <property name="text"><string>전화번호:</string></property>
-        </widget>
-       </item>
-       <item row="4" column="1">
-        <widget class="QLineEdit" name="lineEdit_phone"/>
-       </item>
-
+        <item>
+         <widget class="QLabel" name="label_memberID">
+          <property name="text">
+           <string>회원번호:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdit_memberID"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_name">
+          <property name="text">
+           <string>이름:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdit_name"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_gender">
+          <property name="text">
+           <string>성별:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="comboBox_gender">
+          <item>
+           <property name="text">
+            <string>male</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>female</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_birth">
+          <property name="text">
+           <string>생년월일:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QDateEdit" name="dateEdit_birth"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_phone">
+          <property name="text">
+           <string>전화번호:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdit_phone"/>
+        </item>
         <item>
          <widget class="QPushButton" name="btn_register">
           <property name="text">
@@ -762,7 +2154,6 @@
         </item>
        </layout>
       </widget>
-
      </widget>
     </item>
    </layout>

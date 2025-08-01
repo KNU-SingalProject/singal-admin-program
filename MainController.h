@@ -24,17 +24,17 @@ public:
     // 닌텐도
     void bindNintendoUI(QPushButton* nintendoStartBtn, QPushButton* nintendoStopBtn, QPushButton* nintendoResetBtn,
                         QPushButton* nintendoAvailableBtn, QPushButton* nintendoUnavailableBtn,
-                        QLabel* nintendoTimeLabel);
+                        QLabel* nintendoTimeLabel, QPushButton* manualSetBtn, QLineEdit* manualInput);
 
     // 노래방
     void bindKaraokeUI(QPushButton* karaokeStartBtn, QPushButton* karaokeStopBtn, QPushButton* karaokeResetBtn,
                        QPushButton* karaokeAvailableBtn, QPushButton* karaokeUnavailableBtn,
-                       QLabel* karaokeTimeLabel);
+                       QLabel* karaokeTimeLabel, QPushButton* manualSetBtn, QLineEdit* manualInput);
 
     // 패드민턴
     void bindBadmintonUI(QPushButton* badmintonStartBtn, QPushButton* badmintonStopBtn, QPushButton* badmintonResetBtn,
                          QPushButton* badmintonAvailableBtn, QPushButton* badmintonUnavailableBtn,
-                         QLabel* badmintonTimeLabel);
+                         QLabel* badmintonTimeLabel, QPushButton* manualSetBtn, QLineEdit* manualInput);
 };
 
 #endif // MAINCONTROLLER_H

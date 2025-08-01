@@ -23,20 +23,23 @@ void MainController::bindComputerUI(QVector<QPushButton*> pcAvailableBtns, QVect
 // 닌텐도
 void MainController::bindNintendoUI(QPushButton* nintendoStartBtn, QPushButton* nintendoStopBtn, QPushButton* nintendoResetBtn,
                                     QPushButton* nintendoAvailableBtn, QPushButton* nintendoUnavailableBtn,
-                                    QLabel* nintendoTimeLabel){
-    nintendo->bindUI(nintendoStartBtn, nintendoStopBtn, nintendoResetBtn, nintendoAvailableBtn, nintendoUnavailableBtn, nintendoTimeLabel);
+                                    QLabel* nintendoTimeLabel, QPushButton* manualSetBtn, QLineEdit* manualInput){
+    nintendo->bindUI(nintendoStartBtn, nintendoStopBtn, nintendoResetBtn, nintendoAvailableBtn, nintendoUnavailableBtn,
+                     nintendoTimeLabel, manualSetBtn, manualInput);
 }
 
 // 노래방
 void MainController::bindKaraokeUI(QPushButton* karaokeStartBtn, QPushButton* karaokeStopBtn, QPushButton* karaokeResetBtn,
                                    QPushButton* karaokeAvailableBtn, QPushButton* karaokeUnavailableBtn,
-                                   QLabel* karaokeTimeLabel) {
-    karaoke->bindUI(karaokeAvailableBtn, karaokeStopBtn, karaokeResetBtn, karaokeAvailableBtn, karaokeUnavailableBtn, karaokeTimeLabel);
+                                   QLabel* karaokeTimeLabel, QPushButton* manualSetBtn, QLineEdit* manualInput) {
+    karaoke->bindUI(karaokeStartBtn, karaokeStopBtn, karaokeResetBtn, karaokeAvailableBtn, karaokeUnavailableBtn,
+                    karaokeTimeLabel, manualSetBtn, manualInput);
 }
 
 // 패드민턴
 void MainController::bindBadmintonUI(QPushButton* badmintonStartBtn, QPushButton* badmintonStopBtn, QPushButton* badmintonResetBtn,
                                      QPushButton* badmintonAvailableBtn, QPushButton* badmintonUnavailableBtn,
-                                     QLabel* badmintonTimeLabel) {
-    badminton->bindUI(badmintonStartBtn, badmintonStopBtn, badmintonResetBtn, badmintonAvailableBtn, badmintonUnavailableBtn, badmintonTimeLabel);
+                                     QLabel* badmintonTimeLabel, QPushButton* manualSetBtn, QLineEdit* manualInput) {
+    badminton->bindUI(badmintonStartBtn, badmintonStopBtn, badmintonResetBtn, badmintonAvailableBtn, badmintonUnavailableBtn,
+                      badmintonTimeLabel, manualSetBtn, manualInput);
 }

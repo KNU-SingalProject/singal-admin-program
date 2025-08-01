@@ -17,6 +17,9 @@ private:
     QTimer* timer;
     QTime remainingTime;
 
+    void setTimeInternal(int totalMinutes);
+    QString formatTime(const QTime& time);
+
 public:
     explicit TimerWidget(int defaultMinutes, QWidget* parent = nullptr);
 

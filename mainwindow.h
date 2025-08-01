@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include "MainController.h"
 #include "membermanager.h"
+#include "reservationmanager.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -19,6 +20,10 @@ private:
     Ui::MainWindow *ui;
     MainController* controller;
     MemberManager* memberManager;
+    ReservationManager* pcReservationManager;
+    ReservationManager* nintendoReservationManager;
+    ReservationManager* karaokeReservationManager;
+    ReservationManager* badmintonReservationManager;
 
 public:
     MainWindow(QWidget *parent = nullptr);

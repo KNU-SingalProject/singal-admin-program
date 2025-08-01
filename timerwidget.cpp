@@ -6,8 +6,8 @@ TimerWidget::TimerWidget(int defaultMinutes, QWidget* parent)
     timer = new QTimer(this);
     connect(timer, &QTimer::timeout, this, &TimerWidget::updateTimer);
 
-    remainingTime = QTime(0, defaultMinutes, 0);
-    emit timeUpdated(remainingTime.toString("mm:ss"));  // 초기값 emit
+    setTimeInternal(defaultMinutes); // 초기값 설정
+    emit timeUpdated(formatTime(remainingTime));
 }
 
 void TimerWidget::start() {
@@ -21,14 +21,14 @@ void TimerWidget::stop() {
 
 void TimerWidget::reset() {
     stop();
-    remainingTime = QTime(0, defaultMinutes, 0);
-    emit timeUpdated(remainingTime.toString("mm:ss"));
+    setTimeInternal(defaultMinutes);
+    emit timeUpdated(formatTime(remainingTime));
 }
 
 void TimerWidget::setTime(int minutes) {
     stop();
-    remainingTime = QTime(0, minutes, 0);
-    emit timeUpdated(remainingTime.toString("mm:ss"));
+    setTimeInternal(minutes);
+    emit timeUpdated(formatTime(remainingTime));
 }
 
 void TimerWidget::updateTimer() {
@@ -39,9 +39,25 @@ void TimerWidget::updateTimer() {
     }
 
     remainingTime = remainingTime.addSecs(-1);
-    emit timeUpdated(remainingTime.toString("mm:ss"));
+    emit timeUpdated(formatTime(remainingTime));
 }
 
 QTime TimerWidget::getRemainingTime() const {
     return remainingTime;
+}
+
+void TimerWidget::setTimeInternal(int totalMinutes) {
+    if (totalMinutes <= 0) {
+        remainingTime = QTime(0, 1, 0);
+    } else {
+        int hours = totalMinutes / 60;
+        int minutes = totalMinutes % 60;
+        remainingTime = QTime(hours, minutes, 0);
+    }
+}
+
+QString TimerWidget::formatTime(const QTime& time) {
+    if (time.hour() > 0)
+        return time.toString("hh:mm:ss");
+    return time.toString("mm:ss");
 }

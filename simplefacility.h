@@ -6,6 +6,7 @@
 #include <QJsonObject>
 #include <QPushButton>
 #include <QLabel>
+#include <qlineedit.h>
 
 class SimpleFacility : public facility {
 private:
@@ -24,7 +25,8 @@ public:
     void setUnavailable(int index = 0) override;
 
     void bindUI(QPushButton* startBtn, QPushButton* stopBtn, QPushButton* resetBtn,
-                QPushButton* availableBtn, QPushButton* unavailableBtn, QLabel* timeLabel);
+                QPushButton* availableBtn, QPushButton* unavailableBtn, QLabel* timeLabel,
+                QPushButton* manualSetBtn, QLineEdit* manualInput);
 };
 
 #endif // SIMPLEFACILITY_H

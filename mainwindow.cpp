@@ -22,7 +22,9 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
         ui->btn_nintendo_reset,
         ui->btn_nintendo_available,
         ui->btn_nintendo_unavailable,
-        ui->label_nintendo_time);
+        ui->label_nintendo_time,
+        ui->btn_nintendo_manual_set,
+        ui->lineedit_nintendo_manual);
 
     // 노래방
     controller->bindKaraokeUI(
@@ -31,7 +33,9 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
         ui->btn_karaoke_reset,
         ui->btn_karaoke_available,
         ui->btn_karaoke_unavailable,
-        ui->label_karaoke_time);
+        ui->label_karaoke_time,
+        ui->btn_karaoke_manual_set,
+        ui->lineedit_karaoke_manual);
 
     // 패드민턴
     controller->bindBadmintonUI(
@@ -40,7 +44,29 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
         ui->btn_badminton_reset,
         ui->btn_badminton_available,
         ui->btn_badminton_unavailable,
-        ui->label_badminton_time);
+        ui->label_badminton_time,
+        ui->btn_badminton_manual_set,
+        ui->lineedit_badminton_manual);
+
+    pcReservationManager = new ReservationManager("PC", this);
+    pcReservationManager->bindButtons(
+        ui->btn_pc_use,
+        ui->btn_pc_finish);
+
+    nintendoReservationManager = new ReservationManager("닌텐도", this);
+    nintendoReservationManager->bindButtons(
+        ui->btn_nintendo_use,
+        ui->btn_nintendo_finish);
+
+    karaokeReservationManager = new ReservationManager("노래방", this);
+    karaokeReservationManager->bindButtons(
+        ui->btn_karaoke_use,
+        ui->btn_karaoke_finish);
+
+    badmintonReservationManager = new ReservationManager("패드민턴", this);
+    badmintonReservationManager->bindButtons(
+        ui->btn_badminton_use,
+        ui->btn_badminton_finish);
 
     // 회원 가입 탭
     memberManager = new MemberManager(this);
