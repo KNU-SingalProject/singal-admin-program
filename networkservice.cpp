@@ -18,7 +18,7 @@ NetworkService& NetworkService::instance() {
 
 void NetworkService::post(const QString& endpoint, const QJsonObject& json) {
     QNetworkRequest request(QUrl("http://43.201.162.230:8000" + endpoint));
-    request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
+    request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json; charset=utf-8");
 
     QJsonDocument doc(json);
     QByteArray body = doc.toJson();

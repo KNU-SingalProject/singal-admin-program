@@ -6,22 +6,25 @@
 #include <QVector>
 #include <QWidget>
 #include <QVBoxLayout>
+#include <QJsonObject>
 
-class ComputerFacility : public facility
-{
+class ComputerFacility : public facility {
 private:
     QVector<TimerWidget*> computerTimers;
-    QWidget* container;
 
 public:
-    ComputerFacility(QWidget* parent = nullptr);
+    ComputerFacility();
 
-    void startTimer() override;
-    void stopTimer() override;
+    void startTimer(int index);     // 개별 PC용
+    void stopTimer(int index);      // 개별 PC용
+    void resetTimer(int index);     // 개별 PC용
+
+    void startTimer() override {}   // 전체 타이머 작동 없음
+    void stopTimer() override {}
     void resetTimer() override;
 
-    QWidget* getUI() override;
-    QWidget* getTimerUI(int index) const;
+    virtual void setAvailable(int index = 0) override;
+    virtual void setUnavailable(int index = 0) override;
 };
 
 #endif // COMPUTERFACILITY_H

@@ -4,8 +4,12 @@
 #include <QString>
 #include <QWidget>
 
-class facility
-{
+// facility.h
+class facility {
+protected:
+    QString name;
+    int usageMinutes;
+
 public:
     facility(const QString& name, int usageMinutes);
     virtual ~facility() = default;
@@ -16,11 +20,10 @@ public:
     virtual void startTimer() = 0;
     virtual void stopTimer() = 0;
     virtual void resetTimer() = 0;
-    virtual QWidget* getUI() = 0;
 
-protected:
-    QString name;
-    int usageMinutes;
+    virtual void setAvailable(int index = 0) = 0;
+    virtual void setUnavailable(int index = 0) = 0;
 };
+
 
 #endif // FACILITY_H

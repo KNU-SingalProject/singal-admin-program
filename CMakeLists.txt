@@ -39,7 +39,9 @@ find_package(Qt6 REQUIRED COMPONENTS Network)
         reservationmanager.h reservationmanager.cpp
         membermanager.h membermanager.cpp
         networkservice.h networkservice.cpp
-        MainController.h
+        maincontroller.h maincontroller.cpp
+
+
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET singal-admin APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

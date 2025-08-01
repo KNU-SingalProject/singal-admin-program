@@ -31,14 +31,15 @@ void MemberManager::bindUI(QLineEdit* memberIdEdit,
 void MemberManager::onRegisterClicked()
 {
     QJsonObject payload;
-    payload["memberID"] = memberIdEdit->text();  // 6자리 숫자 입력
-    payload["name"] = nameEdit->text();
-    payload["gender"] = genderCombo->currentText();
+    payload["member_id"] = memberIdEdit->text().trimmed();      // ✅ 정확한 키
+    payload["name"] = nameEdit->text().trimmed();
+    payload["gender"] = genderCombo->currentText().trimmed();   // male / female
     payload["birth"] = birthEdit->date().toString("yyyy-MM-dd");
-    payload["phone_num"] = phoneEdit->text();
+    payload["phone_num"] = phoneEdit->text().trimmed();
+
+    qDebug().noquote() << "[POST] /users/sign-up\n" << QJsonDocument(payload).toJson(QJsonDocument::Indented);
 
     NetworkService::instance().post("/users/sign-up", payload);
-    fetchMembers();
 }
 
 void MemberManager::fetchMembers()
@@ -47,14 +48,14 @@ void MemberManager::fetchMembers()
         memberTable->clearContents();
         memberTable->setRowCount(arr.size());
         memberTable->setColumnCount(4);
-        memberTable->setHorizontalHeaderLabels({"이름", "전화번호", "생년월일", "주소"});
+        memberTable->setHorizontalHeaderLabels({"회원번호", "이름", "전화번호", "생년월일"});
 
         for (int i = 0; i < arr.size(); ++i) {
             QJsonObject obj = arr[i].toObject();
-            memberTable->setItem(i, 0, new QTableWidgetItem(obj["name"].toString()));
-            memberTable->setItem(i, 1, new QTableWidgetItem(obj["phone"].toString()));
-            memberTable->setItem(i, 2, new QTableWidgetItem(obj["birth"].toString()));
-            memberTable->setItem(i, 3, new QTableWidgetItem(obj["address"].toString()));
+            memberTable->setItem(i, 0, new QTableWidgetItem(obj["member_id"].toString()));
+            memberTable->setItem(i, 1, new QTableWidgetItem(obj["name"].toString()));
+            memberTable->setItem(i, 2, new QTableWidgetItem(obj["phone"].toString()));
+            memberTable->setItem(i, 3, new QTableWidgetItem(obj["birth"].toString()));
         }
     });
 }

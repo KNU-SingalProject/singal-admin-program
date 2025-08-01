@@ -1,28 +1,10 @@
 #include "simplefacility.h"
+#include "NetworkService.h"
 
-#include <QVBoxLayout>
-#include <QLabel>
-#include <QLineEdit>
-
-SimpleFacility::SimpleFacility(const QString& name, int minutes, QWidget* parent)
+// simplefacility.cpp
+SimpleFacility::SimpleFacility(const QString& name, int minutes)
     : facility(name, minutes) {
-    container = new QWidget(parent);
-    QVBoxLayout* outerLayout = new QVBoxLayout(container);
-
-    QWidget* innerWidget = new QWidget(container); // 별도 레이아웃 적용용 위젯
-    QVBoxLayout* innerLayout = new QVBoxLayout(innerWidget);
-
-    QLabel* label = new QLabel(name, innerWidget);
-    label->setAlignment(Qt::AlignCenter);
-
-    timer = new TimerWidget(minutes, innerWidget);
-
-    innerLayout->addWidget(label);
-    innerLayout->addWidget(timer);
-    innerWidget->setLayout(innerLayout);
-
-    outerLayout->addWidget(innerWidget);
-    container->setLayout(outerLayout);
+    timer = new TimerWidget(minutes);
 }
 
 void SimpleFacility::startTimer() {
@@ -41,6 +23,16 @@ void SimpleFacility::setManualTime(int minutes) {
     timer->setTime(minutes);
 }
 
-QWidget* SimpleFacility::getUI() {
-    return container;
+void SimpleFacility::setAvailable(int) {
+    QJsonObject payload;
+    payload["facility_name"] = name;
+    payload["status"] = "available";
+    NetworkService::instance().post("/facilities/update-status", payload);
+}
+
+void SimpleFacility::setUnavailable(int) {
+    QJsonObject payload;
+    payload["facility_name"] = name;
+    payload["status"] = "unavailable";
+    NetworkService::instance().post("/facilities/update-status", payload);
 }

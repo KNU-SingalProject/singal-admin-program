@@ -1,6 +1,8 @@
 #include "facility.h"
 
-facility::facility(const QString& name, int usageMinutes) : name(name), usageMinutes(usageMinutes) {}
+// facility.cpp
+facility::facility(const QString& name, int usageMinutes)
+    : name(name), usageMinutes(usageMinutes) {}
 
 QString facility::getName() const {
     return name;
@@ -9,3 +11,4 @@ QString facility::getName() const {
 int facility::getUsageMinutes() const {
     return usageMinutes;
 }
+

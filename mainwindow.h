@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "MainController.h"
 #include "membermanager.h"
 
 QT_BEGIN_NAMESPACE
@@ -9,8 +10,6 @@ namespace Ui {
 class MainWindow;
 }
 QT_END_NAMESPACE
-
-class MainController;
 
 class MainWindow : public QMainWindow
 {

@@ -1,27 +1,30 @@
 #include "computerfacility.h"
+#include "NetworkService.h"
 
-ComputerFacility::ComputerFacility(QWidget* parent) : facility("컴퓨터", 60) {
-    container = new QWidget(parent);
-    QVBoxLayout* layout = new QVBoxLayout(container);
-
+// computerfacility.cpp
+ComputerFacility::ComputerFacility()
+    : facility("컴퓨터", 60) {
     for (int i = 0; i < 4; ++i) {
         TimerWidget* timer = new TimerWidget(usageMinutes);
         computerTimers.append(timer);
-        layout->addWidget(timer);
-    }
-
-    container->setLayout(layout);
-}
-
-void ComputerFacility::startTimer() {
-    for (auto timer : computerTimers) {
-        timer->start();
     }
 }
 
-void ComputerFacility::stopTimer() {
-    for (auto timer : computerTimers) {
-        timer->stop();
+void ComputerFacility::startTimer(int index) {
+    if (index >= 0 && index < computerTimers.size()) {
+        computerTimers[index]->start();
+    }
+}
+
+void ComputerFacility::stopTimer(int index) {
+    if (index >= 0 && index < computerTimers.size()) {
+        computerTimers[index]->stop();
+    }
+}
+
+void ComputerFacility::resetTimer(int index) {
+    if (index >= 0 && index < computerTimers.size()) {
+        computerTimers[index]->reset();
     }
 }
 
@@ -31,13 +34,16 @@ void ComputerFacility::resetTimer() {
     }
 }
 
-QWidget* ComputerFacility::getUI() {
-    return container;
+void ComputerFacility::setAvailable(int index) {
+    QJsonObject payload;
+    payload["pc_number"] = index + 1;
+    payload["status"] = "available";
+    NetworkService::instance().post("/facilities/update-status", payload);
 }
 
-QWidget* ComputerFacility::getTimerUI(int index) const {
-    if (index >= 0 && index < computerTimers.size()) {
-        return computerTimers[index];
-    }
-    return nullptr;
+void ComputerFacility::setUnavailable(int index) {
+    QJsonObject payload;
+    payload["pc_number"] = index + 1;
+    payload["status"] = "unavailable";
+    NetworkService::instance().post("/facilities/update-status", payload);
 }
