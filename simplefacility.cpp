@@ -36,3 +36,13 @@ void SimpleFacility::setUnavailable(int) {
     payload["status"] = "unavailable";
     NetworkService::instance().post("/facilities/update-status", payload);
 }
+
+void SimpleFacility::bindUI(QPushButton* startBtn, QPushButton* stopBtn, QPushButton* resetBtn,
+                            QPushButton* availableBtn, QPushButton* unavailableBtn, QLabel* timeLabel) {
+    connect(startBtn, &QPushButton::clicked, this, &SimpleFacility::startTimer);
+    connect(stopBtn, &QPushButton::clicked, this, &SimpleFacility::stopTimer);
+    connect(resetBtn, &QPushButton::clicked, this, &SimpleFacility::resetTimer);
+    connect(availableBtn, &QPushButton::clicked, this, [=]() { setAvailable(); });
+    connect(unavailableBtn, &QPushButton::clicked, this, [=]() { setUnavailable(); });
+    connect(timer, &TimerWidget::timeUpdated, timeLabel, &QLabel::setText);
+}

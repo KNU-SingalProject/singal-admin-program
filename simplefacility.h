@@ -4,6 +4,8 @@
 #include "facility.h"
 #include "timerwidget.h"
 #include <QJsonObject>
+#include <QPushButton>
+#include <QLabel>
 
 class SimpleFacility : public facility {
 private:
@@ -20,6 +22,9 @@ public:
 
     void setAvailable(int index = 0) override;
     void setUnavailable(int index = 0) override;
+
+    void bindUI(QPushButton* startBtn, QPushButton* stopBtn, QPushButton* resetBtn,
+                QPushButton* availableBtn, QPushButton* unavailableBtn, QLabel* timeLabel);
 };
 
 #endif // SIMPLEFACILITY_H

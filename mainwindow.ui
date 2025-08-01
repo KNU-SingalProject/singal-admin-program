@@ -81,14 +81,14 @@
              </widget>
             </item>
             <item>
-             <widget class="QPushButton" name="btn_pc1_start">
+             <widget class="QPushButton" name="btn_pc1_available">
               <property name="text">
                <string>시설 사용 가능</string>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QPushButton" name="btn_pc1_stop">
+             <widget class="QPushButton" name="btn_pc1_unavailable">
               <property name="text">
                <string>시설 사용 불가</string>
               </property>
@@ -132,14 +132,14 @@
              </widget>
             </item>
             <item>
-             <widget class="QPushButton" name="btn_pc2_start">
+             <widget class="QPushButton" name="btn_pc2_available">
               <property name="text">
                <string>시설 사용 가능</string>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QPushButton" name="btn_pc2_stop">
+             <widget class="QPushButton" name="btn_pc2_unavailable">
               <property name="text">
                <string>시설 사용 불가</string>
               </property>
@@ -183,14 +183,14 @@
              </widget>
             </item>
             <item>
-             <widget class="QPushButton" name="btn_pc3_start">
+             <widget class="QPushButton" name="btn_pc3_available">
               <property name="text">
                <string>시설 사용 가능</string>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QPushButton" name="btn_pc3_stop">
+             <widget class="QPushButton" name="btn_pc3_unavailable">
               <property name="text">
                <string>시설 사용 불가</string>
               </property>
@@ -234,14 +234,14 @@
              </widget>
             </item>
             <item>
-             <widget class="QPushButton" name="btn_pc4_start">
+             <widget class="QPushButton" name="btn_pc4_available">
               <property name="text">
                <string>시설 사용 가능</string>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QPushButton" name="btn_pc4_stop">
+             <widget class="QPushButton" name="btn_pc4_unavailable">
               <property name="text">
                <string>시설 사용 불가</string>
               </property>

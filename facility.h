@@ -2,10 +2,12 @@
 #define FACILITY_H
 
 #include <QString>
-#include <QWidget>
+#include <QObject>
 
 // facility.h
-class facility {
+class facility : public QObject {
+    Q_OBJECT
+
 protected:
     QString name;
     int usageMinutes;

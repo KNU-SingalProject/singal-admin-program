@@ -47,3 +47,28 @@ void ComputerFacility::setUnavailable(int index) {
     payload["status"] = "unavailable";
     NetworkService::instance().post("/facilities/update-status", payload);
 }
+
+void ComputerFacility::bindUI(QVector<QPushButton*> availableBtns, QVector<QPushButton*> unavailableBtns, QVector<QPushButton*> resetBtns, QVector<QLabel*> timeLabels) {
+    for (int i = 0; i < availableBtns.size(); ++i) {
+        connect(availableBtns[i], &QPushButton::clicked, [=]() {
+            setAvailable(i);
+        });
+    }
+
+    for (int i = 0; i < unavailableBtns.size(); ++i) {
+        connect(unavailableBtns[i], &QPushButton::clicked, [=]() {
+            setUnavailable(i);
+        });
+    }
+
+    for (int i = 0; i < resetBtns.size(); ++i) {
+        connect(resetBtns[i], &QPushButton::clicked, [=]() {
+            resetTimer(i);
+        });
+    }
+
+    for (int i = 0; i < timeLabels.size(); ++i) {
+        connect(computerTimers[i], &TimerWidget::timeUpdated, timeLabels[i], &QLabel::setText);
+    }
+
+}

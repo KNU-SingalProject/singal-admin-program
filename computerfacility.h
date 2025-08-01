@@ -4,8 +4,8 @@
 #include "facility.h"
 #include "timerwidget.h"
 #include <QVector>
-#include <QWidget>
-#include <QVBoxLayout>
+#include <QPushButton>
+#include <QLabel>
 #include <QJsonObject>
 
 class ComputerFacility : public facility {
@@ -25,6 +25,9 @@ public:
 
     virtual void setAvailable(int index = 0) override;
     virtual void setUnavailable(int index = 0) override;
+
+    void bindUI(QVector<QPushButton*> availableBtns, QVector<QPushButton*> unavailableBtns,
+                QVector<QPushButton*> resetBtns, QVector<QLabel*> timeLabels);
 };
 
 #endif // COMPUTERFACILITY_H
