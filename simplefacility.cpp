@@ -2,8 +2,8 @@
 #include "NetworkService.h"
 
 // simplefacility.cpp
-SimpleFacility::SimpleFacility(const QString& name, int minutes)
-    : facility(name, minutes) {
+SimpleFacility::SimpleFacility(const QString& name, int minutes, int facilityId)
+    : facility(name, minutes, facilityId){
     timer = new TimerWidget(minutes);
 }
 
@@ -24,18 +24,14 @@ void SimpleFacility::setManualTime(int minutes) {
     timer->start();
 }
 
-void SimpleFacility::setAvailable(int) {
-    QJsonObject payload;
-    payload["facility_name"] = name;
-    payload["status"] = "available";
-    NetworkService::instance().post("/facilities/update-status", payload);
+void SimpleFacility::setAvailable() {
+    QString endpoint = QString("/facility/%1/status?status=active").arg(facilityId);
+    NetworkService::instance().patch(endpoint);
 }
 
-void SimpleFacility::setUnavailable(int) {
-    QJsonObject payload;
-    payload["facility_name"] = name;
-    payload["status"] = "unavailable";
-    NetworkService::instance().post("/facilities/update-status", payload);
+void SimpleFacility::setUnavailable() {
+    QString endpoint = QString("/facility/%1/status?status=off").arg(facilityId);
+    NetworkService::instance().patch(endpoint);
 }
 
 void SimpleFacility::bindUI(QPushButton* startBtn, QPushButton* stopBtn, QPushButton* resetBtn,

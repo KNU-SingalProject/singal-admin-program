@@ -3,28 +3,30 @@
 
 #include <QObject>
 #include <QNetworkAccessManager>
+#include <QJsonArray>
 #include <QJsonObject>
-#include <QNetworkReply>
+#include <functional>
+#include <QHash>
 
-class NetworkService : public QObject
-{
+class NetworkService : public QObject {
     Q_OBJECT
-
-private:
-    NetworkService();
-    QNetworkAccessManager* manager;
 
 public:
     static NetworkService& instance();
 
     void post(const QString& endpoint, const QJsonObject& json);
     void get(const QString& endpoint, std::function<void(const QJsonArray&)> callback);
+    void patch(const QString& endpoint); // no body
+    void patch(const QString& endpoint, const QJsonObject& json); // with body
+    void del(const QString& endpoint);
+
+private:
+    explicit NetworkService();
+    QNetworkAccessManager* manager;
+    QHash<QNetworkReply*, std::function<void(const QJsonArray&)>> callbackMap;
 
 private slots:
     void onReplyFinished(QNetworkReply* reply);
-
-private:
-    std::function<void(const QJsonArray&)> currentCallback;
 };
 
 #endif // NETWORKSERVICE_H

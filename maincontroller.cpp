@@ -2,9 +2,9 @@
 
 MainController::MainController() {
     computer = new ComputerFacility();
-    nintendo = new SimpleFacility("닌텐도", 60);
-    karaoke = new SimpleFacility("노래방", 62);
-    badminton = new SimpleFacility("패드민턴", 30);
+    nintendo = new SimpleFacility("닌텐도", 60, 2);
+    karaoke = new SimpleFacility("노래방", 62, 3);
+    badminton = new SimpleFacility("패드민턴", 30, 4);
 }
 
 MainController::~MainController() {

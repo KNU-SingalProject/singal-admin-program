@@ -6,6 +6,13 @@
 #include <QStringList>
 #include <QPushButton>
 #include <QJsonObject>
+#include <qlabel.h>
+
+struct ReservationEntry {
+    int reservationId;
+    QStringList users;
+};
+
 
 class ReservationManager : public QObject
 {
@@ -13,9 +20,8 @@ class ReservationManager : public QObject
 
 private:
     QString facilityName;
-    QVector<QStringList> reservationList;
-
-    void sendToBackend(const QString& action, const QJsonObject& payload);
+    QVector<ReservationEntry> reservationList;
+    QVector<QLabel*> slotLabels;
 
 private slots:
     void onUseClicked();
@@ -24,12 +30,15 @@ private slots:
 public:
     explicit ReservationManager(const QString& facilityName, QObject* parent = nullptr);
 
-    const QVector<QStringList>& getReservationList() const;
+    int getFacilityId() const;
+    const QVector<ReservationEntry>& getReservationList() const;
     void loadReservations();
+    void displayReservations();
 
     void removeReservation(int index);
     void editReservation(int index, const QStringList& newNames);
 
+    void bindUI(const QVector<QLabel*>& labels);
     void bindButtons(QPushButton* useBtn, QPushButton* closeBtn);
 };
 

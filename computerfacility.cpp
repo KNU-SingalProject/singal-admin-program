@@ -3,7 +3,7 @@
 
 // computerfacility.cpp
 ComputerFacility::ComputerFacility()
-    : facility("컴퓨터", 60) {
+    : facility("컴퓨터", 60, 1) {
     for (int i = 0; i < 4; ++i) {
         TimerWidget* timer = new TimerWidget(usageMinutes);
         computerTimers.append(timer);
@@ -34,16 +34,16 @@ void ComputerFacility::resetTimer() {
     }
 }
 
-void ComputerFacility::setAvailable(int index) {
+void ComputerFacility::setAvailable() {
     QJsonObject payload;
-    payload["pc_number"] = index + 1;
+    //payload["pc_number"] = index + 1;
     payload["status"] = "available";
     NetworkService::instance().post("/facilities/update-status", payload);
 }
 
-void ComputerFacility::setUnavailable(int index) {
+void ComputerFacility::setUnavailable() {
     QJsonObject payload;
-    payload["pc_number"] = index + 1;
+    //payload["pc_number"] = index + 1;
     payload["status"] = "unavailable";
     NetworkService::instance().post("/facilities/update-status", payload);
 }
@@ -51,13 +51,13 @@ void ComputerFacility::setUnavailable(int index) {
 void ComputerFacility::bindUI(QVector<QPushButton*> availableBtns, QVector<QPushButton*> unavailableBtns, QVector<QPushButton*> resetBtns, QVector<QLabel*> timeLabels) {
     for (int i = 0; i < availableBtns.size(); ++i) {
         connect(availableBtns[i], &QPushButton::clicked, [=]() {
-            setAvailable(i);
+            //setAvailable(i);
         });
     }
 
     for (int i = 0; i < unavailableBtns.size(); ++i) {
         connect(unavailableBtns[i], &QPushButton::clicked, [=]() {
-            setUnavailable(i);
+            //setUnavailable(i);
         });
     }
 

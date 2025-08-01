@@ -53,20 +53,72 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
         ui->btn_pc_use,
         ui->btn_pc_finish);
 
+    pcReservationManager->bindUI({
+        ui->value_pc_slot_1,
+        ui->value_pc_slot_2,
+        ui->value_pc_slot_3,
+        ui->value_pc_slot_4,
+        ui->value_pc_slot_5,
+        ui->value_pc_slot_6,
+        ui->value_pc_slot_7,
+        ui->value_pc_slot_8,
+        ui->value_pc_slot_9,
+        ui->value_pc_slot_10
+    });
+
     nintendoReservationManager = new ReservationManager("닌텐도", this);
     nintendoReservationManager->bindButtons(
         ui->btn_nintendo_use,
         ui->btn_nintendo_finish);
+
+    nintendoReservationManager->bindUI({
+        ui->value_nintendo_slot_1,
+        ui->value_nintendo_slot_2,
+        ui->value_nintendo_slot_3,
+        ui->value_nintendo_slot_4,
+        ui->value_nintendo_slot_5,
+        ui->value_nintendo_slot_6,
+        ui->value_nintendo_slot_7,
+        ui->value_nintendo_slot_8,
+        ui->value_nintendo_slot_9,
+        ui->value_nintendo_slot_10
+    });
 
     karaokeReservationManager = new ReservationManager("노래방", this);
     karaokeReservationManager->bindButtons(
         ui->btn_karaoke_use,
         ui->btn_karaoke_finish);
 
+    karaokeReservationManager->bindUI({
+        ui->value_karaoke_slot_1,
+        ui->value_karaoke_slot_2,
+        ui->value_karaoke_slot_3,
+        ui->value_karaoke_slot_4,
+        ui->value_karaoke_slot_5,
+        ui->value_karaoke_slot_6,
+        ui->value_karaoke_slot_7,
+        ui->value_karaoke_slot_8,
+        ui->value_karaoke_slot_9,
+        ui->value_karaoke_slot_10
+    });
+
     badmintonReservationManager = new ReservationManager("패드민턴", this);
     badmintonReservationManager->bindButtons(
         ui->btn_badminton_use,
         ui->btn_badminton_finish);
+
+    badmintonReservationManager->bindUI({
+        ui->value_badminton_slot_1,
+        ui->value_badminton_slot_2,
+        ui->value_badminton_slot_3,
+        ui->value_badminton_slot_4,
+        ui->value_badminton_slot_5,
+        ui->value_badminton_slot_6,
+        ui->value_badminton_slot_7,
+        ui->value_badminton_slot_8,
+        ui->value_badminton_slot_9,
+        ui->value_badminton_slot_10
+    });
 
     // 회원 가입 탭
     memberManager = new MemberManager(this);

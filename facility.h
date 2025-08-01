@@ -11,9 +11,10 @@ class facility : public QObject {
 protected:
     QString name;
     int usageMinutes;
+    int facilityId;
 
 public:
-    facility(const QString& name, int usageMinutes);
+    facility(const QString& name, int usageMinutes, int facilityId);
     virtual ~facility() = default;
 
     QString getName() const;
@@ -23,8 +24,8 @@ public:
     virtual void stopTimer() = 0;
     virtual void resetTimer() = 0;
 
-    virtual void setAvailable(int index = 0) = 0;
-    virtual void setUnavailable(int index = 0) = 0;
+    virtual void setAvailable() = 0;
+    virtual void setUnavailable() = 0;
 };
 
 

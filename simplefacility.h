@@ -13,7 +13,7 @@ private:
     TimerWidget* timer;
 
 public:
-    SimpleFacility(const QString& name, int minutes);
+    SimpleFacility(const QString& name, int minutes, int facilityId);
 
     void startTimer() override;
     void stopTimer() override;
@@ -21,8 +21,8 @@ public:
 
     void setManualTime(int minutes); // 수동 타이머
 
-    void setAvailable(int index = 0) override;
-    void setUnavailable(int index = 0) override;
+    void setAvailable() override;
+    void setUnavailable() override;
 
     void bindUI(QPushButton* startBtn, QPushButton* stopBtn, QPushButton* resetBtn,
                 QPushButton* availableBtn, QPushButton* unavailableBtn, QLabel* timeLabel,

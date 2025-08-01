@@ -23,8 +23,8 @@ public:
     void stopTimer() override {}
     void resetTimer() override;
 
-    virtual void setAvailable(int index = 0) override;
-    virtual void setUnavailable(int index = 0) override;
+    virtual void setAvailable() override;
+    virtual void setUnavailable() override;
 
     void bindUI(QVector<QPushButton*> availableBtns, QVector<QPushButton*> unavailableBtns,
                 QVector<QPushButton*> resetBtns, QVector<QLabel*> timeLabels);
