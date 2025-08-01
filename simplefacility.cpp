@@ -9,14 +9,17 @@ SimpleFacility::SimpleFacility(const QString& name, int minutes, int facilityId)
 
 void SimpleFacility::startTimer() {
     timer->start();
+    wsServer.broadcast(QString("{\"facility\":%1,\"action\":\"start\"}").arg(facilityId));
 }
 
 void SimpleFacility::stopTimer() {
     timer->stop();
+    wsServer.broadcast(QString("{\"facility\":%1,\"action\":\"pause\"}").arg(facilityId));
 }
 
 void SimpleFacility::resetTimer() {
     timer->reset();
+    wsServer.broadcast(QString("{\"facility\":%1,\"action\":\"stop\"}").arg(facilityId));
 }
 
 void SimpleFacility::setManualTime(int minutes) {

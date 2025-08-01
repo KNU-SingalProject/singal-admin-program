@@ -3,14 +3,18 @@
 
 #include "facility.h"
 #include "timerwidget.h"
+#include "websocketserver.h"
 #include <QJsonObject>
 #include <QPushButton>
 #include <QLabel>
 #include <qlineedit.h>
 
+extern WebSocketServer wsServer;
+
 class SimpleFacility : public facility {
 private:
     TimerWidget* timer;
+    void writeCommandToFile(const QString& action);  // 💡 명령 저장 함수
 
 public:
     SimpleFacility(const QString& name, int minutes, int facilityId);
