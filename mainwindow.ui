@@ -1,31 +1,154 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" ?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
-  <property name="geometry">
-   <rect>
-    <x>0</x>
-    <y>0</y>
-    <width>800</width>
-    <height>600</height>
-   </rect>
-  </property>
-  <property name="windowTitle">
-   <string>MainWindow</string>
-  </property>
-  <widget class="QWidget" name="centralwidget"/>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>800</width>
-     <height>26</height>
-    </rect>
-   </property>
+  <class>MainWindow</class>
+  <widget class="QMainWindow" name="MainWindow">
+    <property name="geometry">
+      <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1920</width>
+        <height>1080</height>
+      </rect>
+    </property>
+    <property name="windowTitle">
+      <string>신갈청소년문화의집 관리자 프로그램</string>
+    </property>
+    <widget class="QWidget" name="centralwidget">
+      <layout class="QVBoxLayout" name="mainLayout">
+        <item>
+          <widget class="QTabWidget" name="tabWidget">
+            <property name="currentIndex">
+              <number>0</number>
+            </property>
+            <widget class="QWidget" name="tab_usage">
+              <attribute name="title">
+                <string>시설 사용</string>
+              </attribute>
+              <layout class="QVBoxLayout" name="layout_usage">
+                <item>
+                  <widget class="QLabel" name="label_pc">
+                    <property name="text">
+                      <string>PC 사용</string>
+                    </property>
+                  </widget>
+                </item>
+                <item>
+                  <layout class="QHBoxLayout" name="layout_pc_group">
+                    <item>
+                      <widget class="QWidget" name="pc1">
+                        <layout class="QVBoxLayout" name="layout_pc1"/>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QWidget" name="pc2">
+                        <layout class="QVBoxLayout" name="layout_pc2"/>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QWidget" name="pc3">
+                        <layout class="QVBoxLayout" name="layout_pc3"/>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QWidget" name="pc4">
+                        <layout class="QVBoxLayout" name="layout_pc4"/>
+                      </widget>
+                    </item>
+                  </layout>
+                </item>
+                <item>
+                  <layout class="QHBoxLayout" name="layout_facilities">
+                    <item>
+                      <widget class="QWidget" name="nintendo">
+                        <layout class="QVBoxLayout" name="layout_nintendo_timer"/>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QWidget" name="karaoke">
+                        <layout class="QVBoxLayout" name="layout_karaoke_timer"/>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QWidget" name="badminton">
+                        <layout class="QVBoxLayout" name="layout_badminton_timer"/>
+                      </widget>
+                    </item>
+                  </layout>
+                </item>
+                <item>
+                  <widget class="QLabel" name="label_reservation">
+                    <property name="text">
+                      <string>예약자 명단</string>
+                    </property>
+                  </widget>
+                </item>
+                <item>
+                  <layout class="QGridLayout" name="layout_reservations">
+                    <item row="0" column="0">
+                      <widget class="QLabel" name="label_res_pc">
+                        <property name="text">
+                          <string>PC</string>
+                        </property>
+                      </widget>
+                    </item>
+                    <item row="1" column="0">
+                      <widget class="QWidget" name="res_pc">
+                        <layout class="QVBoxLayout" name="layout_reservation_pc"/>
+                      </widget>
+                    </item>
+                    <item row="0" column="1">
+                      <widget class="QLabel" name="label_res_nintendo">
+                        <property name="text">
+                          <string>Nintendo</string>
+                        </property>
+                      </widget>
+                    </item>
+                    <item row="1" column="1">
+                      <widget class="QWidget" name="res_nintendo">
+                        <layout class="QVBoxLayout" name="layout_reservation_nintendo"/>
+                      </widget>
+                    </item>
+                    <item row="0" column="2">
+                      <widget class="QLabel" name="label_res_karaoke">
+                        <property name="text">
+                          <string>Karaoke</string>
+                        </property>
+                      </widget>
+                    </item>
+                    <item row="1" column="2">
+                      <widget class="QWidget" name="res_karaoke">
+                        <layout class="QVBoxLayout" name="layout_reservation_karaoke"/>
+                      </widget>
+                    </item>
+                    <item row="0" column="3">
+                      <widget class="QLabel" name="label_res_badminton">
+                        <property name="text">
+                          <string>Badminton</string>
+                        </property>
+                      </widget>
+                    </item>
+                    <item row="1" column="3">
+                      <widget class="QWidget" name="res_badminton">
+                        <layout class="QVBoxLayout" name="layout_reservation_badminton"/>
+                      </widget>
+                    </item>
+                  </layout>
+                </item>
+              </layout>
+            </widget>
+            <widget class="QWidget" name="tab_member">
+              <attribute name="title">
+                <string>회원가입</string>
+              </attribute>
+              <layout class="QVBoxLayout" name="layout_member"/>
+            </widget>
+          </widget>
+        </item>
+      </layout>
+    </widget>
+    <widget class="QMenuBar" name="menubar"/>
+    <widget class="QStatusBar" name="statusbar"/>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
- </widget>
- <resources/>
- <connections/>
+  <resources/>
+  <connections/>
 </ui>

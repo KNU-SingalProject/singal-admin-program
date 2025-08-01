@@ -26,6 +26,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     find_package(Qt6 REQUIRED COMPONENTS Widgets)
 find_package(Qt6 REQUIRED COMPONENTS Widgets)
 find_package(Qt6 REQUIRED COMPONENTS Widgets)
+find_package(Qt6 REQUIRED COMPONENTS Core)
+find_package(Qt6 REQUIRED COMPONENTS Network)
 
     qt_add_executable(singal-admin
         MANUAL_FINALIZATION
@@ -34,6 +36,10 @@ find_package(Qt6 REQUIRED COMPONENTS Widgets)
         timerwidget.h timerwidget.cpp
         computerfacility.h computerfacility.cpp
         simplefacility.h simplefacility.cpp
+        reservationmanager.h reservationmanager.cpp
+        membermanager.h membermanager.cpp
+        networkservice.h networkservice.cpp
+        MainController.h
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET singal-admin APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
@@ -61,6 +67,8 @@ target_link_libraries(singal-admin PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
 target_link_libraries(singal-admin PRIVATE Qt6::Widgets)
 target_link_libraries(singal-admin PRIVATE Qt6::Widgets)
 target_link_libraries(singal-admin PRIVATE Qt6::Widgets)
+target_link_libraries(singal-admin PRIVATE Qt6::Core)
+target_link_libraries(singal-admin PRIVATE Qt6::Network)
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
 # If you are developing for iOS or macOS you should consider setting an

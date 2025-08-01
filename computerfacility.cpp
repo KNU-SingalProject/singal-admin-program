@@ -34,3 +34,10 @@ void ComputerFacility::resetTimer() {
 QWidget* ComputerFacility::getUI() {
     return container;
 }
+
+QWidget* ComputerFacility::getTimerUI(int index) const {
+    if (index >= 0 && index < computerTimers.size()) {
+        return computerTimers[index];
+    }
+    return nullptr;
+}

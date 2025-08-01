@@ -21,6 +21,7 @@ public:
     void resetTimer() override;
 
     QWidget* getUI() override;
+    QWidget* getTimerUI(int index) const;
 };
 
 #endif // COMPUTERFACILITY_H

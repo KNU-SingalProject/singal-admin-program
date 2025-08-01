@@ -4,7 +4,7 @@
 #include <QLabel>
 
 SimpleFacility::SimpleFacility(const QString& name, int minutes, QWidget* parent)
-    : Facility(name, minutes) {
+    : facility(name, minutes) {
     timer = new TimerWidget(minutes);
     container = new QWidget(parent);
 

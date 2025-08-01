@@ -38,7 +38,7 @@ void TimerWidget::reset() {
 }
 
 void TimerWidget::setTime(int minutes) {
-    remainingTime = QTime(0, mintes, 0);
+    remainingTime = QTime(0, minutes, 0);
     timeDisplay ->setText(remainingTime.toString("mm:ss"));
 }
 

@@ -8,7 +8,7 @@ class facility
 {
 public:
     facility(const QString& name, int usageMinutes);
-    virtual ~facility();
+    virtual ~facility() = default;
 
     QString getName() const;
     int getUsageMinutes() const;
