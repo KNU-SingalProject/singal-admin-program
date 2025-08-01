@@ -1,154 +1,784 @@
-<?xml version="1.0" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
-  <class>MainWindow</class>
-  <widget class="QMainWindow" name="MainWindow">
-    <property name="geometry">
-      <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>1920</width>
-        <height>1080</height>
-      </rect>
-    </property>
-    <property name="windowTitle">
-      <string>신갈청소년문화의집 관리자 프로그램</string>
-    </property>
-    <widget class="QWidget" name="centralwidget">
-      <layout class="QVBoxLayout" name="mainLayout">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1920</width>
+    <height>1080</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>신갈청소년문화의집 관리자 프로그램</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="mainLayout">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="tab_usage">
+       <attribute name="title">
+        <string>시설 사용</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="layout_usage">
         <item>
-          <widget class="QTabWidget" name="tabWidget">
-            <property name="currentIndex">
-              <number>0</number>
-            </property>
-            <widget class="QWidget" name="tab_usage">
-              <attribute name="title">
-                <string>시설 사용</string>
-              </attribute>
-              <layout class="QVBoxLayout" name="layout_usage">
-                <item>
-                  <widget class="QLabel" name="label_pc">
-                    <property name="text">
-                      <string>PC 사용</string>
-                    </property>
-                  </widget>
-                </item>
-                <item>
-                  <layout class="QHBoxLayout" name="layout_pc_group">
-                    <item>
-                      <widget class="QWidget" name="pc1">
-                        <layout class="QVBoxLayout" name="layout_pc1"/>
-                      </widget>
-                    </item>
-                    <item>
-                      <widget class="QWidget" name="pc2">
-                        <layout class="QVBoxLayout" name="layout_pc2"/>
-                      </widget>
-                    </item>
-                    <item>
-                      <widget class="QWidget" name="pc3">
-                        <layout class="QVBoxLayout" name="layout_pc3"/>
-                      </widget>
-                    </item>
-                    <item>
-                      <widget class="QWidget" name="pc4">
-                        <layout class="QVBoxLayout" name="layout_pc4"/>
-                      </widget>
-                    </item>
-                  </layout>
-                </item>
-                <item>
-                  <layout class="QHBoxLayout" name="layout_facilities">
-                    <item>
-                      <widget class="QWidget" name="nintendo">
-                        <layout class="QVBoxLayout" name="layout_nintendo_timer"/>
-                      </widget>
-                    </item>
-                    <item>
-                      <widget class="QWidget" name="karaoke">
-                        <layout class="QVBoxLayout" name="layout_karaoke_timer"/>
-                      </widget>
-                    </item>
-                    <item>
-                      <widget class="QWidget" name="badminton">
-                        <layout class="QVBoxLayout" name="layout_badminton_timer"/>
-                      </widget>
-                    </item>
-                  </layout>
-                </item>
-                <item>
-                  <widget class="QLabel" name="label_reservation">
-                    <property name="text">
-                      <string>예약자 명단</string>
-                    </property>
-                  </widget>
-                </item>
-                <item>
-                  <layout class="QGridLayout" name="layout_reservations">
-                    <item row="0" column="0">
-                      <widget class="QLabel" name="label_res_pc">
-                        <property name="text">
-                          <string>PC</string>
-                        </property>
-                      </widget>
-                    </item>
-                    <item row="1" column="0">
-                      <widget class="QWidget" name="res_pc">
-                        <layout class="QVBoxLayout" name="layout_reservation_pc"/>
-                      </widget>
-                    </item>
-                    <item row="0" column="1">
-                      <widget class="QLabel" name="label_res_nintendo">
-                        <property name="text">
-                          <string>Nintendo</string>
-                        </property>
-                      </widget>
-                    </item>
-                    <item row="1" column="1">
-                      <widget class="QWidget" name="res_nintendo">
-                        <layout class="QVBoxLayout" name="layout_reservation_nintendo"/>
-                      </widget>
-                    </item>
-                    <item row="0" column="2">
-                      <widget class="QLabel" name="label_res_karaoke">
-                        <property name="text">
-                          <string>Karaoke</string>
-                        </property>
-                      </widget>
-                    </item>
-                    <item row="1" column="2">
-                      <widget class="QWidget" name="res_karaoke">
-                        <layout class="QVBoxLayout" name="layout_reservation_karaoke"/>
-                      </widget>
-                    </item>
-                    <item row="0" column="3">
-                      <widget class="QLabel" name="label_res_badminton">
-                        <property name="text">
-                          <string>Badminton</string>
-                        </property>
-                      </widget>
-                    </item>
-                    <item row="1" column="3">
-                      <widget class="QWidget" name="res_badminton">
-                        <layout class="QVBoxLayout" name="layout_reservation_badminton"/>
-                      </widget>
-                    </item>
-                  </layout>
-                </item>
-              </layout>
-            </widget>
-            <widget class="QWidget" name="tab_member">
-              <attribute name="title">
-                <string>회원가입</string>
-              </attribute>
-              <layout class="QVBoxLayout" name="layout_member"/>
-            </widget>
-          </widget>
+         <widget class="QLabel" name="label_pc">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font-weight: bold; font-size: 16px;</string>
+          </property>
+          <property name="text">
+           <string>PC 사용</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignmentFlag::AlignCenter</set>
+          </property>
+         </widget>
         </item>
-      </layout>
-    </widget>
-    <widget class="QMenuBar" name="menubar"/>
-    <widget class="QStatusBar" name="statusbar"/>
+        <item>
+         <layout class="QHBoxLayout" name="layout_pc_group">
+          <item>
+           <layout class="QVBoxLayout" name="layout_pc1">
+            <item>
+             <widget class="QLabel" name="label_pc1_text">
+              <property name="styleSheet">
+               <string notr="true">font-weight: bold; font-size: 24px;</string>
+              </property>
+              <property name="text">
+               <string>PC-1</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignmentFlag::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_pc1_time">
+              <property name="styleSheet">
+               <string notr="true">font-size: 24px; font-weight: bold;</string>
+              </property>
+              <property name="text">
+               <string>00:00</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignmentFlag::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btn_pc1_start">
+              <property name="text">
+               <string>시설 사용 가능</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btn_pc1_stop">
+              <property name="text">
+               <string>시설 사용 불가</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btn_pc1_reset">
+              <property name="text">
+               <string>초기화</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="layout_pc2">
+            <item>
+             <widget class="QLabel" name="label_pc2_text">
+              <property name="styleSheet">
+               <string notr="true">font-weight: bold; font-size: 24px;</string>
+              </property>
+              <property name="text">
+               <string>PC-2</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignmentFlag::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_pc2_time">
+              <property name="styleSheet">
+               <string notr="true">font-size: 24px; font-weight: bold;</string>
+              </property>
+              <property name="text">
+               <string>00:00</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignmentFlag::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btn_pc2_start">
+              <property name="text">
+               <string>시설 사용 가능</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btn_pc2_stop">
+              <property name="text">
+               <string>시설 사용 불가</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btn_pc2_reset">
+              <property name="text">
+               <string>초기화</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="layout_pc3">
+            <item>
+             <widget class="QLabel" name="label_pc3_text">
+              <property name="styleSheet">
+               <string notr="true">font-weight: bold; font-size: 24px;</string>
+              </property>
+              <property name="text">
+               <string>PC-3</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignmentFlag::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_pc3_time">
+              <property name="styleSheet">
+               <string notr="true">font-size: 24px; font-weight: bold;</string>
+              </property>
+              <property name="text">
+               <string>00:00</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignmentFlag::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btn_pc3_start">
+              <property name="text">
+               <string>시설 사용 가능</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btn_pc3_stop">
+              <property name="text">
+               <string>시설 사용 불가</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btn_pc3_reset">
+              <property name="text">
+               <string>초기화</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="layout_pc4">
+            <item>
+             <widget class="QLabel" name="label_pc4_text">
+              <property name="styleSheet">
+               <string notr="true">font-weight: bold; font-size: 24px;</string>
+              </property>
+              <property name="text">
+               <string>PC-4</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignmentFlag::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_pc4_time">
+              <property name="styleSheet">
+               <string notr="true">font-size: 24px; font-weight: bold;</string>
+              </property>
+              <property name="text">
+               <string>00:00</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignmentFlag::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btn_pc4_start">
+              <property name="text">
+               <string>시설 사용 가능</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btn_pc4_stop">
+              <property name="text">
+               <string>시설 사용 불가</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btn_pc4_reset">
+              <property name="text">
+               <string>초기화</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="layout_facilities">
+          <item>
+           <layout class="QVBoxLayout" name="layout_nintendo_timer">
+            <item>
+             <widget class="QLabel" name="label_nintendo_title">
+              <property name="styleSheet">
+               <string notr="true">font-weight: bold; font-size: 24px;</string>
+              </property>
+              <property name="text">
+               <string>닌텐도</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignmentFlag::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_nintendo_time">
+              <property name="styleSheet">
+               <string notr="true">font-size: 24px; font-weight: bold;</string>
+              </property>
+              <property name="text">
+               <string>00:00</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignmentFlag::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btn_nintendo_start">
+              <property name="maximumSize">
+               <size>
+                <width>3000</width>
+                <height>3000</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>시작</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btn_nintendo_stop">
+              <property name="text">
+               <string>정지</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btn_nintendo_reset">
+              <property name="text">
+               <string>초기화</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btn_nintendo_available">
+              <property name="text">
+               <string>시설 사용 가능</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btn_nintendo_unavailable">
+              <property name="text">
+               <string>시설 사용 불가</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="layout_nintendo_manual">
+              <item>
+               <widget class="QLineEdit" name="lineedit_nintendo_manual">
+                <property name="placeholderText">
+                 <string>분 입력</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_nintendo_manual_set">
+                <property name="text">
+                 <string>수동 시작</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="layout_karaoke_timer">
+            <item>
+             <widget class="QLabel" name="label_karaoke_title">
+              <property name="styleSheet">
+               <string notr="true">font-weight: bold; font-size: 24px;</string>
+              </property>
+              <property name="text">
+               <string>노래방</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignmentFlag::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_karaoke_time">
+              <property name="styleSheet">
+               <string notr="true">font-size: 24px; font-weight: bold;</string>
+              </property>
+              <property name="text">
+               <string>00:00</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignmentFlag::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btn_karaoke_start">
+              <property name="text">
+               <string>시작</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btn_karaoke_stop">
+              <property name="text">
+               <string>정지</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btn_karaoke_reset">
+              <property name="text">
+               <string>초기화</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btn_karaoke_available">
+              <property name="text">
+               <string>시설 사용 가능</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btn_karaoke_unavailable">
+              <property name="text">
+               <string>시설 사용 불가</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="layout_karaoke_manual">
+              <item>
+               <widget class="QLineEdit" name="lineedit_karaoke_manual">
+                <property name="placeholderText">
+                 <string>분 입력</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_karaoke_manual_set">
+                <property name="text">
+                 <string>수동 시작</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="layout_badminton_timer">
+            <item>
+             <widget class="QLabel" name="label_badminton_title">
+              <property name="styleSheet">
+               <string notr="true">font-weight: bold; font-size: 24px;</string>
+              </property>
+              <property name="text">
+               <string>패드민턴</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignmentFlag::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_badminton_time">
+              <property name="styleSheet">
+               <string notr="true">font-size: 24px; font-weight: bold;</string>
+              </property>
+              <property name="text">
+               <string>00:00</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignmentFlag::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btn_badminton_start">
+              <property name="text">
+               <string>시작</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btn_badminton_stop">
+              <property name="text">
+               <string>정지</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btn_badminton_reset">
+              <property name="text">
+               <string>초기화</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btn_badminton_available">
+              <property name="text">
+               <string>시설 사용 가능</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btn_badminton_unavailable">
+              <property name="text">
+               <string>시설 사용 불가</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="layout_badminton_manual">
+              <item>
+               <widget class="QLineEdit" name="lineedit_badminton_manual">
+                <property name="placeholderText">
+                 <string>분 입력</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_badminton_manual_set">
+                <property name="text">
+                 <string>수동 시작</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_reservation">
+          <property name="styleSheet">
+           <string notr="true">font-weight: bold; font-size: 24px; </string>
+          </property>
+          <property name="text">
+           <string>예약자 명단</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignmentFlag::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QGridLayout" name="layout_reservations">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_res_pc">
+            <property name="styleSheet">
+             <string notr="true">font-weight: bold; font-size: 16px;</string>
+            </property>
+            <property name="text">
+             <string>PC</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignmentFlag::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLabel" name="label_res_nintendo">
+            <property name="styleSheet">
+             <string notr="true">font-weight: bold; font-size: 16px;</string>
+            </property>
+            <property name="text">
+             <string>닌텐도</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignmentFlag::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QLabel" name="label_res_karaoke">
+            <property name="styleSheet">
+             <string notr="true">font-weight: bold; font-size: 16px;</string>
+            </property>
+            <property name="text">
+             <string>노래방</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignmentFlag::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="3">
+           <widget class="QLabel" name="label_res_badminton">
+            <property name="styleSheet">
+             <string notr="true">font-weight: bold; font-size: 16px;</string>
+            </property>
+            <property name="text">
+             <string>패드민턴</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignmentFlag::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <layout class="QVBoxLayout" name="layout_reservation_pc">
+            <item>
+             <widget class="QListWidget" name="list_reservation_pc"/>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btn_pc_use">
+              <property name="text">
+               <string>시설 이용</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btn_pc_finish">
+              <property name="text">
+               <string>시설 이용 마감</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="1" column="1">
+           <layout class="QVBoxLayout" name="layout_reservation_nintendo">
+            <item>
+             <widget class="QListWidget" name="list_reservation_nintendo"/>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btn_nintendo_use">
+              <property name="text">
+               <string>시설 이용</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btn_nintendo_finish">
+              <property name="text">
+               <string>시설 이용 마감</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="1" column="2">
+           <layout class="QVBoxLayout" name="layout_reservation_karaoke">
+            <item>
+             <widget class="QListWidget" name="list_reservation_karaoke"/>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btn_karaoke_use">
+              <property name="text">
+               <string>시설 이용</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btn_karaoke_finish">
+              <property name="text">
+               <string>시설 이용 마감</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="1" column="3">
+           <layout class="QVBoxLayout" name="layout_reservation_badminton">
+            <item>
+             <widget class="QListWidget" name="list_reservation_badminton"/>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btn_badminton_use">
+              <property name="text">
+               <string>시설 이용</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btn_badminton_finish">
+              <property name="text">
+               <string>시설 이용 막마</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+
+      <widget class="QWidget" name="tab_member">
+       <attribute name="title">
+        <string>회원가입</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="layout_member">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_memberID">
+         <property name="text"><string>회원번호:</string></property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="lineEdit_memberID"/>
+       </item>
+
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_name">
+         <property name="text"><string>이름:</string></property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="lineEdit_name"/>
+       </item>
+
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_gender">
+         <property name="text"><string>성별:</string></property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QComboBox" name="comboBox_gender">
+         <item><property name="text"><string>male</string></property></item>
+         <item><property name="text"><string>female</string></property></item>
+        </widget>
+       </item>
+
+       <item row="3" column="0">
+        <widget class="QLabel" name="label_birth">
+         <property name="text"><string>생년월일:</string></property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QDateEdit" name="dateEdit_birth"/>
+       </item>
+
+       <item row="4" column="0">
+        <widget class="QLabel" name="label_phone">
+         <property name="text"><string>전화번호:</string></property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QLineEdit" name="lineEdit_phone"/>
+       </item>
+
+        <item>
+         <widget class="QPushButton" name="btn_register">
+          <property name="text">
+           <string>등록</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_member_list">
+          <property name="styleSheet">
+           <string notr="true">font-weight: bold; font-size: 16px; margin-top: 20px;</string>
+          </property>
+          <property name="text">
+           <string>회원 목록</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignmentFlag::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTableWidget" name="table_members">
+          <property name="rowCount">
+           <number>0</number>
+          </property>
+          <property name="columnCount">
+           <number>4</number>
+          </property>
+          <column/>
+          <column/>
+          <column/>
+          <column/>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+
+     </widget>
+    </item>
+   </layout>
   </widget>
-  <resources/>
-  <connections/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1920</width>
+     <height>33</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
 </ui>

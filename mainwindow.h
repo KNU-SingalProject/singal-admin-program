@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "membermanager.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -15,12 +16,13 @@ class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
-public:
-    MainWindow(QWidget *parent = nullptr);
-    ~MainWindow();
-
 private:
     Ui::MainWindow *ui;
     MainController* controller;
+    MemberManager* memberManager;
+
+public:
+    MainWindow(QWidget *parent = nullptr);
+    ~MainWindow();
 };
 #endif // MAINWINDOW_H

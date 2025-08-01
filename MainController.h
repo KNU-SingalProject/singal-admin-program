@@ -54,9 +54,6 @@ public:
         if (facility == "패드민턴") return reservationBadminton->getUI();
         return nullptr;
     }
-
-    // 회원 정보 UI
-    QWidget* getMemberUI() const { return memberManager->getUI(); }
 };
 
 #endif // MAINCONTROLLER_H

@@ -2,17 +2,27 @@
 
 #include <QVBoxLayout>
 #include <QLabel>
+#include <QLineEdit>
 
 SimpleFacility::SimpleFacility(const QString& name, int minutes, QWidget* parent)
     : facility(name, minutes) {
-    timer = new TimerWidget(minutes);
     container = new QWidget(parent);
+    QVBoxLayout* outerLayout = new QVBoxLayout(container);
 
-    QVBoxLayout* layout = new QVBoxLayout(container);
-    QLabel* label = new QLabel(name, container);
-    layout->addWidget(label);
-    layout->addWidget(timer);
-    container->setLayout(layout);
+    QWidget* innerWidget = new QWidget(container); // 별도 레이아웃 적용용 위젯
+    QVBoxLayout* innerLayout = new QVBoxLayout(innerWidget);
+
+    QLabel* label = new QLabel(name, innerWidget);
+    label->setAlignment(Qt::AlignCenter);
+
+    timer = new TimerWidget(minutes, innerWidget);
+
+    innerLayout->addWidget(label);
+    innerLayout->addWidget(timer);
+    innerWidget->setLayout(innerLayout);
+
+    outerLayout->addWidget(innerWidget);
+    container->setLayout(outerLayout);
 }
 
 void SimpleFacility::startTimer() {

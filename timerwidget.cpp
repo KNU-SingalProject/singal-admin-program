@@ -1,5 +1,6 @@
 #include "timerwidget.h"
 #include <QVBoxLayout>
+#include <QString>
 
 TimerWidget::TimerWidget(int defaultMinutes, QWidget* parent) : QWidget(parent), defaultMinutes(defaultMinutes) {
     timeDisplay = new QLabel("00:00", this);
@@ -7,8 +8,14 @@ TimerWidget::TimerWidget(int defaultMinutes, QWidget* parent) : QWidget(parent),
     stopBtn = new QPushButton("정지", this);
     resetBtn = new QPushButton("초기화", this);
 
+    timeDisplay->setAlignment(Qt::AlignCenter);  // ← 중앙 정렬
+    timeDisplay->setStyleSheet("font-size: 32px;");  // ← 폰트 크기 키우기
+
     timer = new QTimer(this);
     connect(timer, &QTimer::timeout, this, &TimerWidget::updateTimer);
+
+    QString uniqueName = QString("timer_%1").arg(reinterpret_cast<quintptr>(this));
+    timeDisplay->setObjectName(uniqueName);
 
     QVBoxLayout* layout = new QVBoxLayout(this);
     layout->addWidget(timeDisplay);
