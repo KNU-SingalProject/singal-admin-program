@@ -2,9 +2,6 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "MainController.h"
-#include "membermanager.h"
-#include "reservationmanager.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -16,17 +13,11 @@ class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
-private:
-    Ui::MainWindow *ui;
-    MainController* controller;
-    MemberManager* memberManager;
-    ReservationManager* pcReservationManager;
-    ReservationManager* nintendoReservationManager;
-    ReservationManager* karaokeReservationManager;
-    ReservationManager* badmintonReservationManager;
-
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+
+private:
+    Ui::MainWindow *ui;
 };
 #endif // MAINWINDOW_H

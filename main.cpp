@@ -1,17 +1,23 @@
 #include "mainwindow.h"
 
 #include <QApplication>
+#include <QLocale>
+#include <QTranslator>
 
-// main.cpp
-#include "websocketserver.h"
+int main(int argc, char *argv[])
+{
+    QApplication a(argc, argv);
 
-WebSocketServer wsServer;  // ✅ 실제 객체 정의
-
-int main(int argc, char *argv[]) {
-    QApplication app(argc, argv);
-
+    QTranslator translator;
+    const QStringList uiLanguages = QLocale::system().uiLanguages();
+    for (const QString &locale : uiLanguages) {
+        const QString baseName = "Singal-Admin_" + QLocale(locale).name();
+        if (translator.load(":/i18n/" + baseName)) {
+            a.installTranslator(&translator);
+            break;
+        }
+    }
     MainWindow w;
     w.show();
-
-    return app.exec();
+    return a.exec();
 }
